@@ -1,0 +1,274 @@
+:root{
+
+    --snr-blue:#2c3e50;
+    --snr-green:#8ada09;
+    --bg:#f4f7f6;
+    --white:#ffffff;
+    --border:#dfe6e9;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Segoe UI',Tahoma,sans-serif;
+    background:var(--bg);
+    height:100vh;
+}
+
+#app{
+
+    display:flex;
+    height:100vh;
+}
+
+/* ================= SIDEBAR ================= */
+
+#sidebar{
+
+    width:280px;
+    background:var(--snr-blue);
+    color:white;
+    padding:25px;
+    border-right:5px solid var(--snr-green);
+
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+.logo-box h2{
+
+    font-size:2rem;
+}
+
+.logo-box p{
+
+    opacity:.8;
+}
+
+.sidebar-info{
+
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.info-item{
+
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+}
+
+.label{
+
+    font-size:.75rem;
+    text-transform:uppercase;
+    opacity:.7;
+}
+
+/* ================= MAIN ================= */
+
+#main{
+
+    flex:1;
+    padding:30px;
+    overflow-y:auto;
+
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+/* ================= TOPBAR ================= */
+
+.topbar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.topbar h1{
+
+    color:var(--snr-blue);
+}
+
+.topbar p{
+
+    color:#7f8c8d;
+}
+
+.topbar-actions{
+
+    display:flex;
+    gap:10px;
+}
+
+/* ================= CARDS ================= */
+
+.card{
+
+    background:white;
+    padding:25px;
+    border-radius:12px;
+
+    box-shadow:0 4px 20px rgba(0,0,0,.08);
+
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.card h3{
+
+    color:var(--snr-blue);
+}
+
+/* ================= GRIDS ================= */
+
+.grid-2{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.grid-actos{
+
+    display:grid;
+    grid-template-columns:
+    120px
+    1fr
+    180px
+    120px
+    140px;
+
+    gap:15px;
+    align-items:end;
+}
+
+/* ================= FORM ================= */
+
+.form-group{
+
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+label{
+
+    font-size:.75rem;
+    text-transform:uppercase;
+    font-weight:bold;
+    color:#7f8c8d;
+}
+
+input{
+
+    padding:12px;
+    border:2px solid var(--border);
+    border-radius:8px;
+
+    font-size:14px;
+}
+
+input:focus{
+
+    outline:none;
+    border-color:var(--snr-blue);
+}
+
+/* ================= BUTTONS ================= */
+
+button{
+
+    padding:12px;
+    border:none;
+    border-radius:8px;
+
+    cursor:pointer;
+    font-weight:bold;
+
+    transition:.2s;
+}
+
+button:hover{
+
+    transform:scale(1.02);
+    opacity:.92;
+}
+
+#btnAgregarActo{
+
+    background:var(--snr-green);
+    color:white;
+}
+
+#btnExportarPDF{
+
+    background:var(--snr-blue);
+    color:white;
+}
+
+#btnNuevo{
+
+    background:#95a5a6;
+    color:white;
+}
+
+/* ================= TABLE ================= */
+
+table{
+
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+
+    background:#f8f9fa;
+}
+
+th{
+
+    text-align:left;
+    padding:14px;
+    font-size:.75rem;
+    text-transform:uppercase;
+
+    color:#7f8c8d;
+}
+
+td{
+
+    padding:14px;
+    border-bottom:1px solid #eee;
+}
+
+/* ================= TOTAL ================= */
+
+.total-box{
+
+    margin-top:10px;
+
+    background:var(--snr-blue);
+    color:white;
+
+    padding:20px;
+    border-radius:10px;
+
+    text-align:right;
+}
+
+.total-box h2{
+
+    color:var(--snr-green);
+    margin-top:5px;
+}

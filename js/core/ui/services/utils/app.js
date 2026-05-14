@@ -1,0 +1,1 @@
+console.log("SNR Liquidador iniciado");
