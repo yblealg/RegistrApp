@@ -4,15 +4,29 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>RegistrApp - SNR</title>
+    <meta
+    name="viewport"
+    content="
+    width=device-width,
+    initial-scale=1.0
+    ">
 
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>
+        RegistrApp
+    </title>
+
+    <!-- ================= CSS ================= -->
+
+    <link
+    rel="stylesheet"
+    href="./assets/css/style.css">
 
 </head>
 
 <body>
+
+    <!-- ================= APP ================= -->
 
     <div id="app">
 
@@ -20,34 +34,67 @@
 
         <aside id="sidebar">
 
-            <div class="brand">
+            <div class="logo-box">
 
-                <h1>RegistrApp</h1>
+                <h2>
+                    RegistrApp
+                </h2>
 
-                <span>
+                <p>
                     Sistema Modular SNR
-                </span>
+                </p>
 
             </div>
 
-            <div class="sidebar-section">
+            <div class="sidebar-info">
 
-                <small>ORIP</small>
-                <h3>Barranquilla</h3>
+                <div class="info-item">
 
-            </div>
+                    <span class="label">
+                        Funcionario
+                    </span>
 
-            <div class="sidebar-section">
+                    <span>
+                        Yair B. Leal Guerra
+                    </span>
 
-                <small>Funcionario</small>
-                <h3>Yair B. Leal Guerra</h3>
+                </div>
 
-            </div>
+                <div class="info-item">
 
-            <div class="sidebar-section">
+                    <span class="label">
+                        Cargo
+                    </span>
 
-                <small>Versión</small>
-                <h3>1.0.0 DEV</h3>
+                    <span>
+                        Administrativo 4044-13
+                    </span>
+
+                </div>
+
+                <div class="info-item">
+
+                    <span class="label">
+                        ORIP
+                    </span>
+
+                    <span>
+                        Barranquilla
+                    </span>
+
+                </div>
+
+                <div class="info-item">
+
+                    <span class="label">
+                        Resolución
+                    </span>
+
+                    <span>
+                        1726 de 2026
+                    </span>
+
+                </div>
 
             </div>
 
@@ -57,37 +104,41 @@
 
         <main id="main">
 
-            <!-- ===== HEADER ===== -->
+            <!-- ================= TOPBAR ================= -->
 
             <header class="topbar">
 
                 <div>
 
-                    <h2>
-                        Liquidador Oficial de Derechos de Registro
-                    </h2>
+                    <h1>
+                        Liquidador de Derechos
+                    </h1>
 
                     <p>
-                        Resolución 1726 de 2026
+                        Superintendencia de Notariado y Registro
                     </p>
 
                 </div>
 
-                <div class="topbar-buttons">
+                <div class="topbar-actions">
 
                     <button id="btnNuevo">
+
                         Nuevo
+
                     </button>
 
-                    <button id="btnPDF">
-                        PDF
+                    <button id="btnExportarPDF">
+
+                        Exportar PDF
+
                     </button>
 
                 </div>
 
             </header>
 
-            <!-- ===== DATOS ===== -->
+            <!-- ================= INFO ================= -->
 
             <section class="card">
 
@@ -99,46 +150,49 @@
 
                     <div class="form-group">
 
-                        <label>Solicitante</label>
+                        <label>
+                            Solicitante
+                        </label>
 
                         <input
-                            type="text"
-                            id="txtSolicitante"
-                        >
+                        type="text"
+                        id="txtSolicitante">
 
                     </div>
 
                     <div class="form-group">
 
-                        <label>Identificación</label>
+                        <label>
+                            Identificación
+                        </label>
 
                         <input
-                            type="text"
-                            id="txtIdentificacion"
-                        >
+                        type="text"
+                        id="txtIdentificacion">
 
                     </div>
 
                     <div class="form-group">
 
-                        <label>Matrícula</label>
+                        <label>
+                            Matrícula
+                        </label>
 
                         <input
-                            type="text"
-                            id="txtMatricula"
-                            placeholder="040-"
-                        >
+                        type="text"
+                        id="txtMatricula">
 
                     </div>
 
                     <div class="form-group">
 
-                        <label>Fecha</label>
+                        <label>
+                            Fecha
+                        </label>
 
                         <input
-                            type="date"
-                            id="txtFecha"
-                        >
+                        type="date"
+                        id="txtFecha">
 
                     </div>
 
@@ -146,7 +200,7 @@
 
             </section>
 
-            <!-- ===== ACTOS ===== -->
+            <!-- ================= ACTOS ================= -->
 
             <section class="card">
 
@@ -158,55 +212,61 @@
 
                     <div class="form-group">
 
-                        <label>Código</label>
+                        <label>
+                            Código
+                        </label>
 
                         <input
-                            type="number"
-                            id="txtCodigoActo"
-                        >
+                        type="number"
+                        id="txtCodigoActo">
 
                     </div>
 
                     <div class="form-group">
 
-                        <label>Acto</label>
+                        <label>
+                            Acto
+                        </label>
 
                         <input
-                            type="text"
-                            id="txtNombreActo"
-                            disabled
-                        >
+                        type="text"
+                        id="txtNombreActo"
+                        disabled>
 
                     </div>
 
                     <div class="form-group">
 
-                        <label>Cuantía</label>
+                        <label>
+                            Cuantía
+                        </label>
 
                         <input
-                            type="number"
-                            id="txtCuantia"
-                            value="0"
-                        >
+                        type="number"
+                        id="txtCuantia">
 
                     </div>
 
                     <div class="form-group">
 
-                        <label>Folios</label>
+                        <label>
+                            Folios
+                        </label>
 
                         <input
-                            type="number"
-                            id="txtFolios"
-                            value="1"
-                        >
+                        type="number"
+                        id="txtFolios"
+                        value="1">
 
                     </div>
 
                     <div class="form-group">
 
-                        <button id="btnAgregarActo">
+                        <button
+                        id="btnAgregarActo">
+
                             Agregar
+
                         </button>
 
                     </div>
@@ -215,7 +275,7 @@
 
             </section>
 
-            <!-- ===== TABLA ===== -->
+            <!-- ================= TABLA ================= -->
 
             <section class="card">
 
@@ -242,6 +302,7 @@
                             </th>
 
                             <th>
+                                Acción
                             </th>
 
                         </tr>
@@ -260,11 +321,11 @@
                         TOTAL GENERAL
                     </span>
 
-                    <h1 id="lblTotalGeneral">
+                    <h2 id="lblTotalGeneral">
 
-                        $0
+                        $ 0
 
-                    </h1>
+                    </h2>
 
                 </div>
 
@@ -274,7 +335,12 @@
 
     </div>
 
-    <script type="module" src="./js/app.js"></script>
+    <!-- ================= JS ================= -->
+
+    <script
+    type="module"
+    src="./js/app.js">
+    </script>
 
 </body>
 
