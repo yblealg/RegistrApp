@@ -112,6 +112,7 @@ export const DICCIONARIO_SIR = {
     "501": { acto: "CONTRATO DERECHO DE USO (SIN CUANTIA)", tarifa: "SIN CUANTIA", folios: "SI" },
     "555": { acto: "DEPURACIÓN (SIN CUANTIA)", tarifa: "SIN CUANTIA", folios: "SI" },
     "619": { acto: "DECLARATORIA POSESIÓN REGULAR LEY 1183/2008 (SIN CUANTIA)", tarifa: "SIN CUANTIA", folios: "SI" },
+    "777": { acto:"VARIOS",tarifa:"CON CUANTIA"}, 
 
     "888": { acto: "OTROS", tarifa: "CON CUANTIA", folios: "NO" },
 
