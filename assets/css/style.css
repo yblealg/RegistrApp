@@ -1,451 +1,315 @@
-/* =========================
-   RESET
-========================= */
+:root {
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+    --snr-blue: #2c3e50;
+    --snr-green: #8ada09;
+    --bg: #f4f7f6;
+    --card: #ffffff;
+    --border: #dfe6e9;
+
 }
 
-/* =========================
-   ROOT
-========================= */
+* {
 
-:root{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 
-    --snr-blue:#2c3e50;
-    --snr-green:#8ada09;
-
-    --bg:#f4f7f6;
-
-    --white:#ffffff;
-
-    --border:#dfe6e9;
-
-    --text:#2d3436;
-
-    --shadow:
-    0 4px 20px rgba(0,0,0,0.08);
-
-    --radius:14px;
 }
 
-/* =========================
-   BODY
-========================= */
+body {
 
-body{
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg);
 
-    font-family:
-    "Segoe UI",
-    Tahoma,
-    sans-serif;
-
-    background:var(--bg);
-
-    color:var(--text);
-
-    height:100vh;
-
-    overflow:hidden;
 }
 
-/* =========================
-   APP LAYOUT
-========================= */
+#app {
 
-#app{
+    display: flex;
+    min-height: 100vh;
 
-    display:flex;
-
-    height:100vh;
 }
 
-/* =========================
-   SIDEBAR
-========================= */
+/* ================= SIDEBAR ================= */
 
-#sidebar{
+#sidebar {
 
-    width:290px;
+    width: 280px;
+    background: var(--snr-blue);
+    color: white;
+    padding: 30px;
+    border-right: 5px solid var(--snr-green);
 
-    background:var(--snr-blue);
-
-    color:white;
-
-    padding:25px;
-
-    border-right:
-    5px solid var(--snr-green);
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:25px;
 }
 
-/* ===== LOGO ===== */
+.logo-box {
 
-.logo-box h2{
+    margin-bottom: 40px;
 
-    font-size:2rem;
-
-    font-weight:800;
-
-    letter-spacing:1px;
 }
 
-.logo-box p{
+.logo-box h2 {
 
-    opacity:.8;
+    font-size: 30px;
 
-    margin-top:5px;
 }
 
-/* ===== INFO ===== */
+.logo-box p {
 
-.sidebar-info{
+    color: #dcdcdc;
 
-    display:flex;
-
-    flex-direction:column;
-
-    gap:18px;
 }
 
-.info-item{
+.sidebar-info {
 
-    display:flex;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 
-    flex-direction:column;
-
-    gap:4px;
 }
 
-.label{
+.info-item {
 
-    font-size:.7rem;
+    display: flex;
+    flex-direction: column;
 
-    text-transform:uppercase;
-
-    opacity:.7;
-
-    letter-spacing:1px;
 }
 
-/* =========================
-   MAIN
-========================= */
+.label {
 
-#main{
+    color: var(--snr-green);
+    font-size: 12px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
 
-    flex:1;
-
-    overflow-y:auto;
-
-    padding:30px;
 }
 
-/* =========================
-   TOPBAR
-========================= */
+/* ================= MAIN ================= */
 
-.topbar{
+#main {
 
-    display:flex;
+    flex: 1;
+    padding: 30px;
 
-    justify-content:space-between;
-
-    align-items:center;
-
-    margin-bottom:25px;
 }
 
-.topbar h1{
+/* ================= TOPBAR ================= */
 
-    font-size:2rem;
+.topbar {
 
-    color:var(--snr-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+
 }
 
-.topbar p{
+.topbar h1 {
 
-    margin-top:5px;
+    color: var(--snr-blue);
 
-    color:#636e72;
 }
 
-/* =========================
-   BUTTONS
-========================= */
+.topbar p {
 
-button{
+    color: #777;
 
-    border:none;
-
-    cursor:pointer;
-
-    transition:.2s;
 }
 
-.topbar-actions{
+.topbar-actions {
 
-    display:flex;
+    display: flex;
+    gap: 10px;
 
-    gap:10px;
 }
 
-#btnNuevo,
-#btnExportarPDF,
-#btnAgregarActo{
+.topbar-actions button {
 
-    padding:12px 18px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
 
-    border-radius:10px;
-
-    font-weight:700;
-
-    text-transform:uppercase;
 }
 
-#btnNuevo{
+#btnNuevo {
 
-    background:#dfe6e9;
+    background: #e74c3c;
+    color: white;
+
 }
 
-#btnExportarPDF{
+#btnExportarPDF {
 
-    background:var(--snr-blue);
+    background: var(--snr-blue);
+    color: white;
 
-    color:white;
 }
 
-#btnAgregarActo{
+/* ================= CARD ================= */
 
-    background:var(--snr-green);
+.card {
 
-    color:white;
+    background: var(--card);
+    border-radius: 14px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
 
-    width:100%;
 }
 
-button:hover{
+.card h3 {
 
-    transform:translateY(-1px);
+    margin-bottom: 20px;
+    color: var(--snr-blue);
 
-    opacity:.95;
 }
 
-/* =========================
-   CARD
-========================= */
+/* ================= GRID ================= */
 
-.card{
+.grid-2 {
 
-    background:white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 
-    padding:25px;
-
-    border-radius:var(--radius);
-
-    box-shadow:var(--shadow);
-
-    margin-bottom:25px;
 }
 
-.card h3{
+.grid-actos {
 
-    margin-bottom:20px;
-
-    color:var(--snr-blue);
-}
-
-/* =========================
-   FORMULARIOS
-========================= */
-
-.grid-2{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(2,1fr);
-
-    gap:20px;
-}
-
-.grid-actos{
-
-    display:grid;
-
+    display: grid;
     grid-template-columns:
     120px
     1fr
     180px
-    120px
-    140px;
+    100px
+    120px;
 
-    gap:15px;
+    gap: 15px;
+    align-items: end;
 
-    align-items:end;
 }
 
-.form-group{
+/* ================= FORM ================= */
 
-    display:flex;
+.form-group {
 
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
 
-    gap:8px;
 }
 
-label{
+.form-group label {
 
-    font-size:.75rem;
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #555;
+    text-transform: uppercase;
 
-    text-transform:uppercase;
-
-    font-weight:700;
-
-    color:#636e72;
 }
 
-input{
+.form-group input {
 
-    padding:13px;
+    padding: 12px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
 
-    border-radius:10px;
-
-    border:2px solid var(--border);
-
-    outline:none;
-
-    transition:.2s;
 }
 
-input:focus{
+.form-group button {
 
-    border-color:var(--snr-green);
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: var(--snr-green);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+
 }
 
-/* =========================
-   TABLA
-========================= */
+/* ================= TABLA ================= */
 
-table{
+table {
 
-    width:100%;
+    width: 100%;
+    border-collapse: collapse;
 
-    border-collapse:collapse;
 }
 
-thead{
+thead {
 
-    background:#f1f2f6;
+    background: #f1f3f4;
+
 }
 
-th{
+th {
 
-    text-align:left;
+    text-align: left;
+    padding: 14px;
+    color: var(--snr-blue);
 
-    padding:14px;
-
-    font-size:.8rem;
-
-    text-transform:uppercase;
-
-    color:#636e72;
 }
 
-td{
+td {
 
-    padding:14px;
+    padding: 14px;
+    border-bottom: 1px solid #eee;
 
-    border-bottom:
-    1px solid #f1f2f6;
 }
 
-/* =========================
-   TOTAL
-========================= */
+/* ================= TOTAL ================= */
 
-.total-box{
+.total-box {
 
-    margin-top:25px;
+    margin-top: 25px;
+    background: var(--snr-blue);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: right;
 
-    background:var(--snr-blue);
-
-    color:white;
-
-    padding:25px;
-
-    border-radius:14px;
-
-    text-align:right;
 }
 
-.total-box span{
+.total-box h2 {
 
-    opacity:.8;
+    color: var(--snr-green);
+    margin-top: 5px;
+
 }
 
-.total-box h2{
+/* ================= RESPONSIVE ================= */
 
-    margin-top:8px;
+@media(max-width: 1200px) {
 
-    color:var(--snr-green);
+    .grid-actos {
 
-    font-size:2rem;
-}
+        grid-template-columns: 1fr;
 
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media(max-width:1200px){
-
-    .grid-actos{
-
-        grid-template-columns:
-        repeat(2,1fr);
-    }
-}
-
-@media(max-width:900px){
-
-    #app{
-
-        flex-direction:column;
     }
 
-    #sidebar{
+}
 
-        width:100%;
+@media(max-width: 900px) {
 
-        border-right:none;
+    #app {
 
-        border-bottom:
-        5px solid var(--snr-green);
+        flex-direction: column;
+
     }
 
-    .grid-2{
+    #sidebar {
 
-        grid-template-columns:1fr;
+        width: 100%;
+
     }
 
-    .grid-actos{
+    .grid-2 {
 
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
+
     }
 
-    .topbar{
-
-        flex-direction:column;
-
-        align-items:flex-start;
-
-        gap:15px;
-    }
 }
